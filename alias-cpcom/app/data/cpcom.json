@@ -1,0 +1,17 @@
+[
+  {
+    "id":1,
+    "cp":"75000",
+    "libelle":"paris"
+  },
+  {
+    "id":2,
+    "cp":"59000",
+    "libelle":"lille"
+  },
+  {
+    "id":3,
+    "cp":"92000",
+    "libelle":"haut-de-seine"
+  }
+]

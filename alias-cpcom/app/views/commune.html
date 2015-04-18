@@ -1,0 +1,58 @@
+<div class="contrainer">
+  <h5>Commune : hello world</h5>
+  {{communeId}}
+  {{commune}}
+
+
+  <form role="form" ng-submit="addVariation()" class="form-inline">
+    <div class="row">
+
+      <input type="text" ng-model="libelle"
+             placeholder="Saisi un libellé" class="form-control col-lg-8">
+
+      <label>
+        <input type="checkbox" ng-model="ocr" class="form-control">
+        OCR
+      </label>
+
+      <label>
+        <input type="checkbox" ng-model="vdc" class="form-control">
+        VDC
+      </label>
+
+      <label>
+        <input type="checkbox" ng-disabled="true">
+        Code Type
+      </label>
+
+      <input type="submit" class="btn btn-primary" value="+">
+    </div>
+  </form>
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Libellé</th>
+        <th>OCR</th>
+        <th>VDC</th>
+        <th>Code Type</th>
+      </tr>
+    </thead>
+
+    <tbody ng-repeat="var in variations">
+      <tr>
+        <td>{{var.libelle}}</td>
+        <td>{{var.ocr}}</td>
+        <td>{{var.vdc}}</td>
+        <td>{{var.code}}</td>
+        <td>
+          <span class="glyphicon glyphicon-minus"
+            ng-click="removeVariation($index)"></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+</div>
